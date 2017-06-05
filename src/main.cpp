@@ -47,6 +47,7 @@ int main()
     {
 
       auto s = hasData(std::string(data));
+
       if (s != "") {
       	
         auto j = json::parse(s);
@@ -86,7 +87,7 @@ int main()
         		iss >> ro;
         		iss >> theta;
         		iss >> ro_dot;
-        		meas_package.raw_measurements_ << ro,theta, ro_dot;
+        		meas_package.raw_measurements_ << ro, theta, ro_dot;
         		iss >> timestamp;
         		meas_package.timestamp_ = timestamp;
         }
